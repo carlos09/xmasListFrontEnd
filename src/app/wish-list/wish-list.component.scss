@@ -1,0 +1,12 @@
+.wishlist-container {
+    display: flex;
+}
+
+.wishlist-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.wishlist-item-img {
+    max-height: 150px;
+}

@@ -1,0 +1,20 @@
+<div class="p-4">
+    <div class="container">
+        <h1>Wish List</h1> <button mat-raised-button color="primary" [routerLink]="['add']">Add item</button>
+        <div class="wishlist-container">
+            <mat-card class="wishlist-item" *ngFor="let item of wishListData">
+                <span class="topPick-message" *ngIf="item.topPick">Top Pick</span>
+                <img class="wishlist-item-img" src="{{ item.imgSrc ? item.imgSrc : 'assets/images/gift.png' }}" />
+                <a href="{{ item.link }}" target="_blank">{{ item.title }}</a>  
+                <div>
+                    <label>Price: </label> <span>{{ item.price }}</span>
+                </div>
+                <div>
+                    <label>By the way: </label> <span>{{ item.comment }}</span>
+                </div>
+                       
+            </mat-card>
+        </div>
+
+    </div>
+</div>

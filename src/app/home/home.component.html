@@ -1,6 +1,10 @@
 ﻿<div class="p-4">
     <div class="container">
         <h1>Hi {{account.firstName}}!</h1>
-        <p>You're logged in with Angular 10 & JWT!!</p>
+        <p>You have <b>{{ wishListCount }}</b> items in your wish list.</p>
+
+        <div *ngIf="wishListCount < 1">
+            <button [routerLink]="['wish-list', account.wishListId ]">Create My Wish List</button>
+        </div>
     </div>
 </div>

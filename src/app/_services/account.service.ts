@@ -52,6 +52,7 @@ export class AccountService {
     }
 
     register(account: Account) {
+        console.log('register()', account);
         return this.http.post(`${baseUrl}/register`, account);
     }
 
